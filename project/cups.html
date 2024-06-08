@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кружки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Указываем для скрипта в id какая текущая страница -->
+<body id="cups">
+
+    <!-- Окно с котом -->
+    <div class="cat">
+        <img src="img/cat.png">
+        <p class="cat-text">Нажми пробел</p>
+    </div>
+
+
+
+    <!-- Шапка -->
+    <div class="header">
+        <div class="logo">PrintGift</div>
+    </div>
+
+    <!-- Меню -->
+    <div class="menu">
+        <a href="index.html">Главная</a>
+        <a href="tshirts.html">Футболки</a>
+        <a href="cups.html">Кружки</a>
+        <a href="cases.html">Чехлы</a>
+    </div>
+
+
+    <!-- Слайдер -->
+    <div class="slider">
+        <div class="slide">
+
+            <table border="0" cellspacing="0" callpadding="0">
+                <tr>
+                    <td>
+                        <!-- На левую стрелочку сменить слайд влево -->
+                        <img src="img/left.png" class="left" onclick="changeSlide(imgCups, textCups, -1)">
+                    </td>
+                    
+                    <td>
+                        <!-- Картинка слайда -->
+                        <img src="img/cup1.png" id="slide-image">
+                    </td>
+                    
+                    <td>
+                        <!-- На правую стрелочку сменить слайд вправо  -->
+                        <img src="img/right.png" class="right" onclick="changeSlide(imgCups, textCups, 1)">
+                    </td>
+                </tr>
+            </table> 
+            
+            <p id="slide-text">У самяурая нет ъеьи, только ъуь</p>
+            <p class="info"><i>Управлять можно стрелками клавиатуры или мышкой</i></p>
+        </div>
+    </div>
+
+
+    <!-- Контент -->
+    <div class="content">
+        <h2>Загрузи свой рисунок и мы пришлем вещь с твоим дизайном!</h2>
+
+        <!-- Кнопки с действиями -->
+        <table class="actions" width="30%" cellspacing="35" align="center">
+            <tr>
+                <!-- Поменять стиль при наведении курсора, сбросить при своде курсора -->
+                <td class="action" onmouseenter="changeStyle(this)" onmouseleave="resetStyle(this)" onclick="alert('Товар заказан')">
+                    <h3>Заказать</h3>
+                </td>
+            </tr>
+        </table>
+
+        <p class="info"><i>Смена стилей при наведении через js</i></p>
+    </div>
+
+    <div class="footer">
+        <p>PrintGift &copy; 2024</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
